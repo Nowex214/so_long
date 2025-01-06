@@ -6,7 +6,7 @@
 /*   By: ehenry <ehenry@student.42luxembourg.lu>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 17:15:18 by ehenry            #+#    #+#             */
-/*   Updated: 2025/01/02 20:07:21 by ehenry           ###   ########.fr       */
+/*   Updated: 2025/01/06 09:48:08 by ehenry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,6 @@ int	main(int ac, char **av)
 	{
 		ft_printf("Try: ./so_long <map_file>\n");
 		return (1);
-	}
-	if (!check_map_validity(game))
-	{
-		ft_printf("Map is invalid: some collectables are not reachable\n")
 	}
 	if (!initialize_game(&game, av))
 	{

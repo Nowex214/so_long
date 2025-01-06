@@ -6,7 +6,7 @@
 /*   By: ehenry <ehenry@student.42luxembourg.lu>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 16:22:59 by ehenry            #+#    #+#             */
-/*   Updated: 2025/01/02 20:05:05 by ehenry           ###   ########.fr       */
+/*   Updated: 2025/01/06 09:17:25 by ehenry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -165,7 +165,11 @@ typedef struct s_game
 	t_animation	anim;
 	t_enemy		*enemies;
 }				t_game;
-
+//reachable
+void			flood_fill(char **map, int y, int x, t_game *game);
+char			**copy_map(char **map);
+void			check_access(t_game *game);
+int				verify_collectibles(t_game *game);
 // animation
 int				idle_right_loop(t_game *game);
 int				idle_left_loop(t_game *game);
@@ -242,7 +246,4 @@ int				initialize_game(t_game *game, char **av);
 int				init_mlx_and_map(t_game *game, char **av);
 void			init_camera_dimensions(t_game *game);
 int				init_window(t_game *game);
-// reachable
-int				check_map_validity(t_game *game);
-void			flood_fill(char **map, int y, int x, t_flood_fill start);
 #endif

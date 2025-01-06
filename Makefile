@@ -33,8 +33,8 @@ SRCS = srcs/graphics/graphics.c\
 		srcs/enemy/enemy_mouv.c\
 		srcs/core/error.c\
 		srcs/core/init.c\
-		srcs/core/free2.c\
-		srcs/core/reachable.c
+		srcs/core/free2.c
+
 
 
 OBJS = $(SRCS:.c=.o)
